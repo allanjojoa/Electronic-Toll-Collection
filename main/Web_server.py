@@ -9,7 +9,6 @@ import os.path
 from flask_mysqldb import MySQL
 
 found=False
-src = 0
 cap = cv2.VideoCapture(1)
 
 mysql = MySQL()
