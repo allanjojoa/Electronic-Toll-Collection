@@ -20,13 +20,6 @@ app.config['MYSQL_DB'] = 'plate_info'
 app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
  
-
-#if len(sys.argv) < 2:
-#    print "Format: python <prog_name> <filename>\n"
-#    os.system("pause")
-#    sys.exit()
-
-#filename=sys.argv[-1]
 try:
     os.remove("static/imgOriginalScene.png")
 except:
@@ -38,9 +31,8 @@ while found==False:
     ret, filename= cap.read()
     plate=Main.main(filename)
     found=os.path.exists("static/imgOriginalScene.png")
-# create app
 print 'Found\n'
-#app = Flask(__name__)
+
 
 
 @app.route('/')
